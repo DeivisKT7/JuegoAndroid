@@ -1,0 +1,592 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body{
+	background: black;
+}
+
+.contenedor{
+
+}
+
+@media (min-width: 0) and (max-width: 767px){
+
+	.mayor{
+		z-index: 100;
+	}
+
+	.mediano{
+		z-index: 50;
+	}
+
+	.bajo{
+		z-index: 25;
+	}
+
+	.contenedor-juego{
+		height: 100vh;
+		padding: 10px;
+	}
+
+	.contenedor-header-menu{
+
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		height: 10%;
+		outline: 1px solid white;
+	}
+
+	.contenedor-estadisticas-item{
+		display: flex;
+		width: 100%;
+		text-align: center;
+		background: black;
+		border-right: 1px solid yellow;
+		font-size: 15px;
+	}
+
+	.caja:first-child{
+		display: flex;
+		width: 75%;
+	}
+
+
+	.caja:first-child ul .item{
+		
+		margin-left: 4px;
+		margin-right: 4px;
+		flex-grow: 1;
+		background: black;
+		list-style: none;
+		align-self: center;
+		color: white;
+		outline: 2px solid gray;
+		padding: 3px;
+
+		font-size: 14px;
+
+		height: 90%;
+
+		display: flex;
+		align-items: center;
+
+
+	}
+
+	.caja:last-child{
+		background: black;
+		color: white;
+		margin-left: 5px;
+		margin-right: 5px;
+		width: 25%;
+		text-align: center;
+		align-self: center;
+		font-size: 14px;
+	}
+
+
+
+	.imgChica{
+
+	
+
+		height: 120px;
+		width: 140px;
+		border: 2px solid yellow;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 60%;
+		margin: auto;
+
+
+	}
+
+	.imgChicaAnim1{
+		transition: top 1s, bottom 1s, left 1s, right 1s;
+		transition-timing-function: ease-in-out;
+		background: red;
+		top: 0;
+		bottom: 50%;
+		right: 0;
+		left: 0;
+	}
+
+
+	.imgChicaAnim3{
+		top: 45%;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	.imgChicaAnim2{
+		animation-name: anim2;
+		animation-duration: 3s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease;
+	
+	}
+
+	@KeyFrames anim2{
+		0%{
+			bottom: 50%;
+		}
+
+		80%{
+			opacity: 1;
+		}
+
+		90%{
+			opacity: .5;
+		}
+
+		99%{
+			bottom: 60%;
+			opacity: .1;
+		}
+
+		100%{
+			bottom: 60%;
+			opacity: 0;
+		}
+	}
+
+	.disabled{
+		opacity: 0;
+	}
+
+	.enable{
+		opacity: 1;
+	}
+
+	.contenedor-text{
+		background: black;
+		color: white;
+		width: 70%;
+		height: 100px;
+		overflow: auto;
+		border: 1px solid white;
+		padding: 5px;
+
+		position: absolute;
+
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		left: 0;
+		right: 0;
+
+		z-index: 8000;
+		
+		
+		border-radius: 3px;
+		font-size: 20px;
+	}
+
+	.borderYellow{
+		box-shadow: 0 0 7px yellow;
+	}
+
+	.borderBlue{
+		box-shadow: 0 0 7px blue;
+	}
+
+	.borderRed{
+		box-shadow: 0 0 7px red;
+	}
+
+	.text{
+
+	}
+
+
+	.saltarTexto{
+		color: black;
+		background: white;
+		border: 2px solid gray;
+		transition: opacity .3;
+		
+		height: 25px;
+	}
+
+	.saltarTexto:active{
+		opacity: .75;
+	}
+
+	.imgPlayer{
+
+		height: 120px;
+		width: 140px;
+		border: 2px solid blue;
+		position: absolute;
+		top: 55%;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		margin: auto;
+
+		z-index: 6000;
+
+	}
+
+
+	.iniciarGame{
+
+		position: absolute;
+		top: 0;
+		bottom: 0 !important;
+		right: 0;
+		left: 0;
+		margin: auto;
+		z-index: 10000;
+
+	}
+
+
+	.Iniciar b{
+		align-self: center;
+		background: green;
+		color: white;
+		border: 1px solid white;
+		padding: 15px 25px;
+		user-select: none;
+
+		border-radius: 3px;
+	}
+
+	.Iniciar b:active{
+		background: red;
+	}
+
+
+
+	.contenedor-main-menu{
+		background-image: url(img/ef6d5b6afc8701a4e9dbcaf77251357c.jpg);
+		background-size: 100% 100%;
+		height: calc(100% - 10%);
+	}
+
+	.between{
+		justify-content: space-between;
+	}
+
+
+	.calle, .templo, .iniciarGame{
+		
+	    height: 50px;
+		width: 100px;
+		display: flex;
+		align-items: center;
+		color: white;
+		background: black;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 65%;
+		margin: auto;
+		z-index: 200;
+		justify-content: center;
+		background: green;
+		border: 1px solid white;
+		border-radius: 3px;
+		z-index: 6000;
+	}
+
+	.katedral{		
+	    height: 50px;
+		width: 100px;
+		display: flex;
+		align-items: center;
+		color: white;
+		background: black;
+		position: absolute;
+		bottom: 30px;
+		right: 0;
+		left: 0;
+		margin: auto;
+		z-index: 200;
+		justify-content: center;
+		background: green;
+		border: 1px solid white;
+		border-radius: 3px;
+		z-index: 6000;
+	}
+
+	.d-none{
+		display: none !important;
+	}
+
+	.enemigos1:first-child{
+		position: absolute;
+		height: 80px;
+		width: 80px;
+		object-fit: cover;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 45%;
+		margin: auto;
+		transform: translateX(-120%);
+		border: 1px solid red;
+		box-shadow: 0 0 10px red;
+		border-radius: 3px;
+		z-index: 6000;
+
+	}
+
+	.enemigos1:nth-child(2){
+		position: absolute;
+		height: 80px;
+		width: 80px;
+		object-fit: cover;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 45%;
+		margin: auto;
+		border: 1px solid red;
+		box-shadow: 0 0 10px red;
+		border-radius: 3px;
+		z-index: 6000;
+
+	}
+
+	.enemigos1:last-child{
+		position: absolute;
+		height: 80px;
+		width: 80px;
+		object-fit: cover;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 45%;
+		margin: auto;
+		transform: translateX(120%);
+		border: 1px solid red;
+		box-shadow: 0 0 10px red;
+		border-radius: 3px;
+		z-index: 6000;
+
+	}
+
+	.animate{
+		animation-name: Sufrir;
+		animation-duration: 0.2s;
+		animation-direction: alternate;
+		animation-iteration-count: 2;
+	}
+
+	@keyFrames Sufrir{
+
+		from{
+		    box-shadow: 0 0 10px red;
+		}
+
+		to{
+			box-shadow: 0 0 50px red;
+		}
+	}
+
+	.inventario{
+		position: absolute;
+		left: 10px;
+		bottom: 10px;
+		height: 160px;
+		width: 160px;
+		display: flex;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		background: black;
+		outline: 1px solid blue;
+		padding: 10px;
+		z-index: 9000;
+	}
+
+	.item-vida{
+		
+		background-image: url(img/PotionHealth.jpg);
+		background-size: cover;
+	}
+
+	.item-mana{
+		
+		background-image: url(img/PotionMana.jpg);
+		background-size: cover;
+	}
+
+	.items{
+		height: 40%;
+		width: 40%;
+		border-radius: 5px;
+		color: white;
+		text-align: center;
+		border: none;
+
+		margin-left: 5%;
+		margin-right: 5%;
+	
+		
+		outline: 1px solid white;
+
+		margin-bottom: 5%;
+		margin-top: 5%;
+	}
+
+	.espada{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 51%;
+		margin: auto;
+		height: 100px;
+		width: 100px;
+		background-image: url(img/espada.jpg);
+		background-size: 100% 100%;
+		border: 1px solid white;
+		z-index: 6000;
+	}
+
+
+
+	.playerAnim1{
+		transition: top 4s, bottom 4s, left 4s, right 4s;
+		top: 0;
+		bottom: 27%;
+		left: 0;
+		right: 0;
+		transition-timing-function: ease-in-out;
+	}
+
+	.arriba1{
+		transition: bottom 1s;
+		bottom: 53%;
+		transition-timing-function: ease-in-out;
+	}
+
+	.arriba2{
+		transition: bottom 1s;
+		bottom: 55%;
+		transition-timing-function: ease-in-out;
+	}
+
+	.arriba3{
+		transition: bottom 1s;
+		bottom: 57%;
+		transition-timing-function: ease-in-out;
+	}
+
+	.playerEspada{
+		background-image: url(img/playerEspada.jpg);
+	}
+
+	.playerAnim2{
+		bottom: 45%;
+		top: 0;
+		transition: bottom .5s, top .5s;
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+	.enemigos2:first-child{
+		position: absolute;
+		height: 80px;
+		width: 80px;
+		object-fit: cover;
+		bottom: 0;
+		top: 45%;
+		left: 0;
+		right: 0;
+		margin: auto;
+		transform: translateX(-120%);
+		border: 1px solid red;
+		box-shadow: 0 0 10px red;
+		border-radius: 3px;
+		opacity: 0;
+		z-index: 6000;
+
+	}
+
+	.enemigos2:nth-child(2){
+		position: absolute;
+		height: 80px;
+		width: 80px;
+		object-fit: cover;
+		bottom: 0;
+		top: 45%;
+		left: 0;
+		right: 0;
+		margin: auto;
+		border: 1px solid red;
+		box-shadow: 0 0 10px red;
+		border-radius: 3px;
+		opacity: 0;
+		z-index: 6000;
+
+	}
+
+	.enemigos2:last-child{
+		position: absolute;
+		height: 80px;
+		width: 80px;
+		object-fit: cover;
+		bottom: 0;
+		top: 45%;
+		left: 0;
+		right: 0;
+		margin: auto;
+		transform: translateX(120%);
+		border: 1px solid red;
+		box-shadow: 0 0 10px red;
+		border-radius: 3px;
+		opacity: 0;
+		z-index: 6000;
+
+	}
+
+	.enemigos2Spawn{
+		transition: opacity 3s;
+		transition-timing-function: linear;
+		opacity: 1 !important;
+	}
+
+	.creditos, .dead{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		align-items: flex-start;
+		color: white;
+		background: black;
+		z-index: 9050;
+		justify-content: center;
+		text-align: center;
+		font-size: 40px;
+		background-image: url(img/Final.jpg);
+		background-size: 100% 100%;
+	}
+
+	.dead{
+		align-items: center;
+		color: red;
+	}
+}
